@@ -140,6 +140,9 @@ button {
     border: none;
     background: none;
 }
+.ant-menu-item {
+    padding: 16px !important;
+   }
 
 /* ant design */
 .ant-layout-sider-children {
@@ -157,7 +160,7 @@ button {
 
 
 @media (width < 600px) {
-   li{ padding: 0;}
+
    .ant-menu-item {
     padding: 10px !important;
    }

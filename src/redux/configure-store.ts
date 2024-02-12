@@ -1,11 +1,13 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
 import { commonApi } from './services/common.api';
 import { setupListeners } from '@reduxjs/toolkit/query';
+import { generalConditionsSlice } from './slices/GeneralConditionsSlice';
 
 
 export const store = configureStore({
   reducer: {
     [commonApi.reducerPath]: commonApi.reducer,
+    generalConditions: generalConditionsSlice.reducer,
 
   },
   middleware: (getDefaultMiddleware) =>
