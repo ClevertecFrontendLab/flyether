@@ -59,7 +59,7 @@
     .link {
         font-weight: 400;
         font-size: 16px;
-        margin: 10px 23px 3px
+        margin: 10px 23px 3px;
     }
     .setting {
         display: none;
@@ -81,7 +81,7 @@
         right: 6%;
         border: 1px solid var(--character-light-border);
         border-radius: 100px;
-   font-size: 14px;
+        font-size: 14px;
         width: 31px;
         height: 31px;
         box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);

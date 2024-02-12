@@ -4,7 +4,7 @@ import { MainPage } from '@pages/index';
 import { LayoutApp } from '../components/Layout/index';
 
 
-export  const GlobalRoutes = () => {
+export const GlobalRoutes = () => {
 
   return (
     <Routes>

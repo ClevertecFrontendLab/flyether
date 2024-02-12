@@ -1,4 +1,3 @@
 export enum Url {
-  BASE_URL = 'https://clevertec.by/api/',
-
+    BASE_URL = 'https://clevertec.by/api/',
 }

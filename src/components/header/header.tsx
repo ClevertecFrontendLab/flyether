@@ -12,9 +12,9 @@ export const Header: React.FC = () => {
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [isEbuchka, setEbuchka] = useState(false);
     const { collapsedSider } = useAppSelector((state) => state.generalConditions);
-console.log(isEbuchka, 'isEbuchka', collapsedSider," collapsedSider ", screenWidth , "creenWidth")
+    console.log(isEbuchka, 'isEbuchka', collapsedSider, " collapsedSider ", screenWidth, "creenWidth")
     useEffect(() => {
-        if (!collapsedSider && screenWidth > 600 && screenWidth < 900) {setEbuchka(true)}else setEbuchka(false)
+        if (!collapsedSider && screenWidth > 600 && screenWidth < 900) { setEbuchka(true) } else setEbuchka(false)
     }, [collapsedSider, screenWidth]);
 
     useEffect(() => {
@@ -27,10 +27,10 @@ console.log(isEbuchka, 'isEbuchka', collapsedSider," collapsedSider ", screenWid
         return () => window.removeEventListener('resize', handleResize);
     }, [screenWidth]);
 
-    return <Layout.Header className={cx(styles.wrapper, {wrapper_ebuchka: isEbuchka })}>
+    return <Layout.Header className={cx(styles.wrapper, { wrapper_ebuchka: isEbuchka })}>
         <NavLink className={styles.link} to={""}>Главная</NavLink>
-        <button type="button" className={cx(styles.setting, {setting_ebuchka: isEbuchka })}> <SettingOutlined className={cx(styles.ico)} />  Настройки</button>
+        <button type="button" className={cx(styles.setting, { setting_ebuchka: isEbuchka })}> <SettingOutlined className={cx(styles.ico)} />  Настройки</button>
         <button type="button" className={styles.setting_small}> <SettingOutlined />  </button>
-        <span className={cx(styles.title, {title_ebuchka: isEbuchka })} >Приветствуем тебя в CleverFit— приложении, <br />которое поможет тебе добиться своей мечты!</span>
+        <span className={cx(styles.title, { title_ebuchka: isEbuchka })} >Приветствуем тебя в CleverFit— приложении, <br />которое поможет тебе добиться своей мечты!</span>
     </Layout.Header>
 };

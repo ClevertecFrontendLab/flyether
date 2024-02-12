@@ -13,15 +13,6 @@ export const commonApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: Url.BASE_URL,
 
-    prepareHeaders: (headers) => {
-      // const token = localStorage.getItem('tokenClever');
-
-      // if (token) {
-      //   headers.set('Authorization', `bearer ${token}`);
-      // }
-
-      // return headers;
-    },
   }) as BaseQueryFn<
     string | FetchArgs,
     unknown,
@@ -32,7 +23,6 @@ export const commonApi = createApi({
 
   tagTypes: [
     'User',
-   
   ],
   endpoints: (_) => ({}),
 });

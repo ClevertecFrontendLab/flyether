@@ -1,17 +1,15 @@
-
 export type Detail = {
-  description: string;
+    description: string;
 };
 export interface IError {
-  data: {
-    message: string;
-    stack: string;
-  };
-  status: number;
+    data: {
+        message: string;
+        stack: string;
+    };
+    status: number;
 }
 export type RegData = {
-  email: string;
-  password: string;
-  name?: string;
+    email: string;
+    password: string;
+    name?: string;
 };
-

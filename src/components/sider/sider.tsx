@@ -44,18 +44,13 @@ export const Side: React.FC = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, [screenWidth]);
 
-    // useEffect(() => {
-    //     if (collapsed) { dispatch(setCollapsedSider(true)) } 
-    //     if (!collapsed){ dispatch(setCollapsedSider(false)) }
-    // }, [collapsed, dispatch]);
 
     const onClick: MenuProps['onClick'] = e => {
         console.log('click ', e.key);
     };
-    
+
     const hendleCollapsed = () => {
         setCollapsed(!collapsed)
-        console.log(collapsed,   'collapsed  сайдер ')
         dispatch(setCollapsedSider(!collapsed))
     };
 
@@ -96,7 +91,7 @@ export const Side: React.FC = () => {
                 />
             </div>
             <div className={cx(styles.exit_div, { block: collapsed && screenWidth < 600, border_none: collapsed && screenWidth < 600 })} >  {screenWidth < 600 ? "" : <img alt='exit ico' src={exit} className={styles.ico} />}  {collapsed ? '' : 'Выход'} </div>
-            <button className={styles.button} data-test-id={isDataTextButton} type='button' onClick={ hendleCollapsed }>{React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+            <button className={styles.button} data-test-id={isDataTextButton} type='button' onClick={hendleCollapsed}>{React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                 className: styles.trigger,
                 // onClick: () => setCollapsed(!collapsed),
             })}</button>
