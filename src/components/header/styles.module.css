@@ -3,10 +3,7 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* max-width: 1364px; */
-    /* padding:16px 24px; */
     width: 100%;
-  
 }
 .setting_small {
     display: none;
@@ -17,12 +14,12 @@
     font-size: 38px;
     line-height: 130%;
     color: var(--character-light-title-85);
-    letter-spacing: 1px;
-    margin: 0px 24px 26px;
+    letter-spacing: 0.9px;
+    margin: 0px 24px 23px;
 }
 
 .link {
-    margin: 16px 24px;
+    margin: 12px 24px  9px;
 }
 
 .setting {
@@ -45,7 +42,7 @@
     .ico {
         display: none;
     }
-    .title{
+    .title {
         font-size: 24px;
         margin: 0px 30% 26px 24px;
     }
@@ -54,14 +51,14 @@
     .setting {
         display: none;
     }
-    .title{
+    .title {
         font-size: 20px;
     }
     .setting_small {
         display: flex;
         position: absolute;
         justify-content: center;
-     align-items: center;
+        align-items: center;
         top: 40px;
         right: 2%;
         border: 1px solid var(--character-light-border);
@@ -70,6 +67,6 @@
         width: 32px;
         height: 32px;
         box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
-background: var(--character-light-primary-inverse);
+        background: var(--character-light-primary-inverse);
     }
 }

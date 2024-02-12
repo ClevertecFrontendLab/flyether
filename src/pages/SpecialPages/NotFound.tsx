@@ -4,7 +4,7 @@ import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
 
-const NotFound = () => {
+export const NotFound = () => {
   const navigate = useNavigate();
 
   const redirectToMain = () => {
@@ -24,12 +24,9 @@ const NotFound = () => {
           </div>
           <div className={styles.content__button}>
           <Button type="primary" onClick={redirectToMain}>На главную</Button>
-            
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default NotFound;
+}

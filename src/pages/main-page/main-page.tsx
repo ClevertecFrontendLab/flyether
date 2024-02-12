@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import cnBind from 'classnames/bind';
 import styles from './main-page.module.css';
 import { CalendarTwoTone, HeartFilled, IdcardOutlined } from '@ant-design/icons';
-import { Footer } from '../../compinents/footer/footer';
+import { Footer } from '../../components/footer/footer';
 
 const cx = cnBind.bind(styles);
 
@@ -21,10 +21,10 @@ export const MainPage: React.FC = () => {
           инструкциям и советам профессиональных тренеров. </div>
         <div className={cx(styles.block, styles.text_big)}> CleverFit — это не просто приложение, а твой личный помощник в мире фитнеса. Не откладывай на завтра — начни тренироваться уже сегодня! </div>
         <div className={styles.row}>
-          <div className={cx(styles.block_row, styles.margin_left_24)}> <p className={styles.ico_p} >Расписать тренировки </p> <div className={styles.ico_div}><HeartFilled className={styles.ico} />Тренировки</div></div>
-          <div className={styles.block_row}> <p className={styles.ico_p}>Назначить календарь </p><div className={styles.ico_div}><CalendarTwoTone className={styles.ico} twoToneColor='#2f54eb
+          <div className={cx(styles.block_row, styles.margin_left_24)}> <div className={styles.ico_p} >Расписать тренировки </div> <div className={styles.ico_div}><HeartFilled className={styles.ico} />Тренировки</div></div>
+          <div className={styles.block_row}> <div className={styles.ico_p}>Назначить календарь </div><div className={styles.ico_div}><CalendarTwoTone className={styles.ico} twoToneColor='#2f54eb
               '/> Календарь</div></div>
-          <div className={styles.block_row}><p className={styles.ico_p}> Запонить профиль</p> <div className={styles.ico_div}><IdcardOutlined className={styles.ico} />Профиль</div>
+          <div className={styles.block_row}><div className={styles.ico_p}> Запонить профиль</div> <div className={styles.ico_div}><IdcardOutlined className={styles.ico} />Профиль</div>
           </div>
         </div>
       </div >

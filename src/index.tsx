@@ -7,7 +7,7 @@ import { store } from '@redux/configure-store';
 
 import 'normalize.css';
 import './index.css';
-import GlobalRoutes from './router/GlobalRoutes';
+import {GlobalRoutes} from './router/GlobalRoutes';
 
 const domNode = document.getElementById('root') as HTMLDivElement;
 const root = createRoot(domNode);
