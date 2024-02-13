@@ -63,8 +63,9 @@
     border-top: rgba(0, 0, 0, 0.15) 2px solid;
     display: flex;
     align-items: center;
-    gap: 36px;
-    padding: 18px 16px;
+    gap: 15px;
+    padding: 0px 0 0 16px;
+    margin-bottom: -7px;
 }
 
 @media (width < 980px) {
