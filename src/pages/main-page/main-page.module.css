@@ -116,55 +116,58 @@
 }
 
 @media (width < 900px) {
-    .ico_p {
-        margin:10px 0 10px -5px ;
+    .ico_p_ebuchka {
+        margin: 10px 0 10px -5px;
         max-width: 55px;
         height: fit-content;
         word-break: break-all;
         text-align: left;
     }
-    .block {
+    .block_ebuchka {
         max-width: 315px;
     }
-    .row_footer {
-margin-top:0px;
-height: 184px;
+    .row_footer_ebuchka {
+        margin-top: 0px;
+        height: 184px;
     }
-    
+    .row_footer_ne_ebuchka {
+        margin-top: 280px;
+    }
 
-    .block_row {
+    .block_row_ebuchka {
         width: 126px;
         padding: 0;
-        display: flex;
-        align-items: center;
         text-align: center;
         height: fit-content;
-        font-size: 16px;
         line-height: 130%;
         word-break: break-all;
     }
+    .block_row_ne_ebuchka {
+        width: 230px;
+    }
 
-    .main {
+    .main_ebuchka {
         max-width: 460px;
         justify-content: center;
+    }
+    .row_s {
+        gap: 0px;
     }
 }
 
 @media (width < 600px) {
     .text_blue {
         font-weight: 500;
-font-size: 16px;
-line-height: 130%;
+        font-size: 16px;
+        line-height: 130%;
         letter-spacing: 1.3px;
         line-height: 133%;
     }
 
     .reviews {
-    
         order: 2;
     }
     .row_footer {
- 
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -184,12 +187,11 @@ line-height: 130%;
         text-align: center;
     }
     .block {
-    max-width: 300px;
+        max-width: 300px;
         /* margin:0 10px 0 ; */
         width: 85%;
         margin: auto;
         padding: 14px 12px 14px 10px;
-      
     }
     .main {
         max-width: 360px;

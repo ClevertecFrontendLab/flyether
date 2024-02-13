@@ -72,12 +72,14 @@
 }
 @media (width < 600px) {
     .sider {
-        position: absolute;
+        position:fixed;
         z-index: 15;
         top: 0;
         bottom: 0;
     }
-
+    .img {
+       display: none;
+    }
     .button {
         top: 28px;
         width: 28px;

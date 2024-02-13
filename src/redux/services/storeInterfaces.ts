@@ -13,3 +13,6 @@ export type RegData = {
     password: string;
     name?: string;
 };
+export type propsSize = {
+    windowSize: number
+  }

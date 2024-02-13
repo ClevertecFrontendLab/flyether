@@ -5,7 +5,6 @@ import logo from '../../assets/svg/logo.svg';
 import cap from '../../assets/svg/cap.svg';
 import fit from '../../assets/svg/fit.svg';
 import exit from '../../assets/svg/exit.svg';
-
 import { Layout, Menu, MenuProps } from 'antd';
 import {
     CalendarTwoTone,
@@ -13,37 +12,29 @@ import {
     IdcardOutlined,
     MenuFoldOutlined,
     MenuUnfoldOutlined,
-
 } from '@ant-design/icons';
-import { useAppDispatch } from '../../hooks/'
+import { useAppDispatch, useAppSelector } from '../../hooks/'
 import { setCollapsedSider } from '@redux/slices/GeneralConditionsSlice';
 
 const cx = cnBind.bind(styles);
 const { Sider } = Layout;
 
-export const Side: React.FC = () => {
+export const Side = () => {
     const [collapsed, setCollapsed] = useState(false);
     const dispatch = useAppDispatch();
     const [collapsedWidth, setCollapsedWidth] = useState(64);
     const [wight, setWight] = useState(208);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
     const [isDataTextButton, setDataTextButton] = useState('sider-switch');
+    const { screenWidth } = useAppSelector((state) => state.generalConditions);
 
     useEffect(() => {
-        function handleResize() {
-            setScreenWidth(window.innerWidth);
-        }
         if (screenWidth >= 600) { setDataTextButton('sider-switch') }
         if (screenWidth < 600) {
             setDataTextButton('sider-switch-mobile')
             setCollapsedWidth(0)
             setWight(106)
         }
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
     }, [screenWidth]);
-
 
     const onClick: MenuProps['onClick'] = e => {
         console.log('click ', e.key);

@@ -48,6 +48,10 @@
 }
 
 @media (width < 900px) {
+    .setting {
+        top: 33px;
+        right: 8%;
+    }
     .ico {
         display: none;
     }

@@ -5,27 +5,19 @@ import { NavLink } from 'react-router-dom';
 import { SettingOutlined } from "@ant-design/icons";
 import { useAppSelector } from '../../hooks';
 import cnBind from 'classnames/bind';
+
 const cx = cnBind.bind(styles);
 
 
-export const Header: React.FC = () => {
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+export const Header = ( )  => {
+
     const [isEbuchka, setEbuchka] = useState(false);
-    const { collapsedSider } = useAppSelector((state) => state.generalConditions);
-    console.log(isEbuchka, 'isEbuchka', collapsedSider, " collapsedSider ", screenWidth, "creenWidth")
+    const { collapsedSider, screenWidth } = useAppSelector((state) => state.generalConditions);
+  
     useEffect(() => {
         if (!collapsedSider && screenWidth > 600 && screenWidth < 900) { setEbuchka(true) } else setEbuchka(false)
     }, [collapsedSider, screenWidth]);
 
-    useEffect(() => {
-        function handleResize() {
-            setScreenWidth(window.innerWidth);
-        }
-
-        window.addEventListener('resize', handleResize);
-
-        return () => window.removeEventListener('resize', handleResize);
-    }, [screenWidth]);
 
     return <Layout.Header className={cx(styles.wrapper, { wrapper_ebuchka: isEbuchka })}>
         <NavLink className={styles.link} to={""}>Главная</NavLink>

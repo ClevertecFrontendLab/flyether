@@ -2,12 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type InitialStateProps = {
     collapsedSider: boolean;
-    searchValue: undefined | string;
+    screenWidth: number;
 };
 
 const initialState: InitialStateProps = {
     collapsedSider: false,
-    searchValue: undefined,
+    screenWidth: window.innerWidth,
 };
 
 export const generalConditionsSlice = createSlice({
@@ -17,11 +17,10 @@ export const generalConditionsSlice = createSlice({
         setCollapsedSider(state, action) {
             state.collapsedSider = action.payload;
         },
-
-        setSearchValue(state, action) {
-            state.searchValue = action.payload;
+        setScreenWidth(state, action) {
+            state.screenWidth = action.payload;
         },
     },
 });
 
-export const { setCollapsedSider } = generalConditionsSlice.actions;
+export const { setCollapsedSider, setScreenWidth } = generalConditionsSlice.actions;
