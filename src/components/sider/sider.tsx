@@ -28,8 +28,12 @@ export const Side = () => {
     const { screenWidth } = useAppSelector((state) => state.generalConditions);
 
     useEffect(() => {
-        if (screenWidth >= 600) { setDataTextButton('sider-switch') }
-        if (screenWidth < 600) {
+        if (screenWidth >= 650) { 
+            setDataTextButton('sider-switch')
+            setWight(208)
+            setCollapsedWidth(64)
+        }
+        if (screenWidth < 650) {
             setDataTextButton('sider-switch-mobile')
             setCollapsedWidth(0)
             setWight(106)
@@ -59,29 +63,29 @@ export const Side = () => {
                     items={[
                         {
                             key: '1',
-                            icon: screenWidth > 600 ? <CalendarTwoTone className={styles.ico} twoToneColor='#003a8c
+                            icon: screenWidth > 650 ? <CalendarTwoTone className={styles.ico} twoToneColor='#003a8c
               '/> : '',
                             label: collapsed ? '' : 'Календарь',
                         },
                         {
                             key: '2',
-                            icon: screenWidth > 600 ? <HeartFilled className={styles.ico} /> : '',
+                            icon: screenWidth > 650 ? <HeartFilled className={styles.ico} /> : '',
                             label: collapsed ? '' : 'Тренировки',
                         },
                         {
                             key: '3',
-                            icon: screenWidth > 600 ? <img alt='cap ico' src={cap} className={styles.ico} /> : '',
+                            icon: screenWidth > 650 ? <img alt='cap ico' src={cap} className={styles.ico} /> : '',
                             label: collapsed ? '' : 'Достижения',
                         },
                         {
                             key: '4',
-                            icon: screenWidth > 600 ? <IdcardOutlined className={styles.ico} /> : '',
+                            icon: screenWidth > 650 ? <IdcardOutlined className={styles.ico} /> : '',
                             label: collapsed ? '' : 'Профиль',
                         },
                     ]}
                 />
             </div>
-            <div className={cx(styles.exit_div, { block: collapsed && screenWidth < 600, border_none: collapsed && screenWidth < 600 })} >  {screenWidth < 600 ? "" : <img alt='exit ico' src={exit} className={styles.ico} />}  {collapsed ? '' : 'Выход'} </div>
+            <div className={cx(styles.exit_div, { block: collapsed && screenWidth < 650, border_none: collapsed && screenWidth < 650 })} >  {screenWidth < 650 ? "" : <img alt='exit ico' src={exit} className={styles.ico} />}  {collapsed ? '' : 'Выход'} </div>
             <button className={styles.button} data-test-id={isDataTextButton} type='button' onClick={hendleCollapsed}>{React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
                 className: styles.trigger,
                 // onClick: () => setCollapsed(!collapsed),

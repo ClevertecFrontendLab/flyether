@@ -1,6 +1,6 @@
 .row {
     display: flex;
-    gap: 16px;
+
     width: 100%;
     margin-top: -9px;
 }
@@ -9,11 +9,14 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100%;
+    /* width: 90%; */
 }
 
 .margin_left_24 {
     margin-left: 24px;
+}
+.margin_left_16 {
+    margin-left: 16px;
 }
 
 .main {
@@ -45,7 +48,6 @@
     box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
     background: var(--character-light-primary-inverse);
     font-family: var(--font-family);
-    font-weight: 400;
     font-size: 16px;
     line-height: 130%;
     color: var(--character-light-title-85);
@@ -115,7 +117,7 @@
     letter-spacing: -0.9px;
 }
 
-@media (width < 900px) {
+@media (width < 980px) {
     .ico_p_ebuchka {
         margin: 10px 0 10px -5px;
         max-width: 55px;
@@ -155,7 +157,7 @@
     }
 }
 
-@media (width < 600px) {
+@media (width < 650px) {
     .text_blue {
         font-weight: 500;
         font-size: 16px;
@@ -196,6 +198,7 @@
     .main {
         max-width: 360px;
         justify-content: center;
+        margin: auto;
     }
     .row {
         display: flex;

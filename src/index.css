@@ -156,7 +156,7 @@ button {
 @media (prefers-color-scheme: light) {
 }
 
-@media (width < 600px) {
+@media (width < 650px) {
     .ant-menu-item {
         padding: 10px !important;
     }

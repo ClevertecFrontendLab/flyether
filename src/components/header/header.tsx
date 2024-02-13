@@ -9,15 +9,13 @@ import cnBind from 'classnames/bind';
 const cx = cnBind.bind(styles);
 
 
-export const Header = ( )  => {
-
+export const Header = () => {
     const [isEbuchka, setEbuchka] = useState(false);
     const { collapsedSider, screenWidth } = useAppSelector((state) => state.generalConditions);
-  
-    useEffect(() => {
-        if (!collapsedSider && screenWidth > 600 && screenWidth < 900) { setEbuchka(true) } else setEbuchka(false)
-    }, [collapsedSider, screenWidth]);
 
+    useEffect(() => {
+        if (!collapsedSider && screenWidth > 650 && screenWidth < 980) { setEbuchka(true) } else setEbuchka(false)
+    }, [collapsedSider, screenWidth]);
 
     return <Layout.Header className={cx(styles.wrapper, { wrapper_ebuchka: isEbuchka })}>
         <NavLink className={styles.link} to={""}>Главная</NavLink>

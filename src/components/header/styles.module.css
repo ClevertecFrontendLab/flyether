@@ -31,14 +31,15 @@
     font-size: 14px;
     justify-content: flex-end;
     gap: 10px;
-    top: 20px;
-    right: 2%;
+    top: 35px;
+    right: 1%;
     letter-spacing: 0.42px;
 }
 
 .setting_ebuchka {
     top: 32px;
 }
+
 .wrapper_ebuchka {
     max-width: 460px;
 }
@@ -47,27 +48,32 @@
     margin: 0px 30% 26px 24px;
 }
 
-@media (width < 900px) {
+@media (width < 980px) {
     .setting {
         top: 33px;
         right: 8%;
     }
+
     .ico {
         display: none;
     }
+
     .title {
         font-size: 24px;
     }
 }
-@media (width < 600px) {
+
+@media (width < 650px) {
     .link {
         font-weight: 400;
         font-size: 16px;
         margin: 10px 23px 3px;
     }
+
     .setting {
         display: none;
     }
+
     .title {
         max-width: 260px;
         font-weight: 500;
@@ -76,6 +82,7 @@
         line-height: 130%;
         margin: 0px 0 25px 20px;
     }
+
     .setting_small {
         display: flex;
         position: absolute;
