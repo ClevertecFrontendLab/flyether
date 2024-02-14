@@ -1,0 +1,214 @@
+.row {
+    display: flex;
+
+    width: 100%;
+    margin-top: -9px;
+}
+.row_footer {
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* width: 90%; */
+}
+
+.margin_left_24 {
+    margin-left: 24px;
+}
+.margin_left_16 {
+    margin-left: 16px;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px 0;
+
+    justify-content: space-between;
+}
+.gap {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 24px;
+}
+.block {
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: var(--character-light-primary-inverse);
+    padding: 24px 74px 26px 24px;
+    border-radius: 2px;
+    max-width: 654px;
+    margin-left: 24px;
+}
+.block_row {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+    background: var(--character-light-primary-inverse);
+    font-family: var(--font-family);
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--character-light-title-85);
+    border-radius: 2px;
+    width: 240px;
+    font-weight: 600;
+    align-items: center;
+    justify-content: center;
+}
+
+.ico_p {
+    margin: 10px auto;
+}
+.text_blue {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var(--primary-light-9);
+    letter-spacing: 0.5px;
+}
+
+.text_big {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+    color: var(--character-light-title-85);
+}
+
+.ico {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--primary-light-6);
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.reviews {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 130%;
+    letter-spacing: 0.5px;
+    color: var(--primary-light-6);
+    order: 1;
+    cursor: pointer;
+    margin: 0px 0 13px 40px;
+}
+.reviews:hover,
+.ico:hover,
+.ico_div:hover {
+    color: var(--primary-light-9);
+}
+
+.ico_div {
+    color: var(--primary-light-6);
+    width: 100%;
+    height: 56px;
+    box-shadow: inset 0 1px 0 0 var(--character-light-dividers);
+    background: var(--character-light-primary-inverse);
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: -0.9px;
+}
+
+@media (width < 980px) {
+    .ico_p_ebuchka {
+        margin: 10px 0 10px -5px;
+        max-width: 55px;
+        height: fit-content;
+        word-break: break-all;
+        text-align: left;
+    }
+    .block_ebuchka {
+        max-width: 315px;
+    }
+    .row_footer_ebuchka {
+        margin-top: 0px;
+        height: 184px;
+    }
+    .row_footer_ne_ebuchka {
+        margin-top: 280px;
+    }
+
+    .block_row_ebuchka {
+        width: 126px;
+        padding: 0;
+        text-align: center;
+        height: fit-content;
+        line-height: 130%;
+        word-break: break-all;
+    }
+    .block_row_ne_ebuchka {
+        width: 230px;
+    }
+
+    .main_ebuchka {
+        max-width: 440px;
+        justify-content: center;
+    }
+    .row_s {
+        gap: 0px;
+    }
+}
+
+@media (width < 650px) {
+    .text_blue {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 130%;
+        letter-spacing: 1.3px;
+        line-height: 133%;
+    }
+
+    .reviews {
+        order: 2;
+    }
+    .row_footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+        gap: 30px;
+    }
+
+    .block_row {
+        width: 90%;
+    }
+    .ico_p {
+        max-width: 100%;
+        margin: 10px 5px;
+        text-align: center;
+    }
+    .block {
+        max-width: 300px;
+        /* margin:0 10px 0 ; */
+        width: 85%;
+        margin: auto;
+        padding: 14px 12px 14px 10px;
+    }
+    .main {
+        max-width: 360px;
+        justify-content: center;
+        margin: auto;
+    }
+    .row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .margin_left_24 {
+        margin-left: 0px;
+    }
+}
